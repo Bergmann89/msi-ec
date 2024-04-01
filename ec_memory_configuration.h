@@ -40,6 +40,11 @@ struct msi_ec_cooler_boost_conf {
 	int bit;
 };
 
+struct msi_ec_usb_power_charge_conf {
+	int address;
+	int bit;
+};
+
 #define MSI_EC_MODE_NULL { NULL, 0 }
 struct msi_ec_mode {
 	const char *name;
@@ -67,6 +72,11 @@ struct msi_ec_cpu_conf {
 	int rt_fan_speed_address; // realtime
 	int rt_fan_speed_base_min;
 	int rt_fan_speed_base_max;
+
+	int tr_table_size;
+	int rt_table_temp_start_adress;
+	int rt_table_fan_speed_start_adress;
+
 	int bs_fan_speed_address; // basic
 	int bs_fan_speed_base_min;
 	int bs_fan_speed_base_max;
@@ -83,6 +93,12 @@ struct msi_ec_led_conf {
 	int bit;
 };
 
+struct msi_ec_fans {
+	int fan0_address;
+	int fan1_address;
+	int fan2_address;
+};
+
 #define MSI_EC_KBD_BL_STATE_MASK 0x3
 struct msi_ec_kbd_bl_conf {
 	int bl_mode_address;
@@ -97,17 +113,19 @@ struct msi_ec_kbd_bl_conf {
 struct msi_ec_conf {
 	const char **allowed_fw;
 
-	struct msi_ec_charge_control_conf charge_control;
-	struct msi_ec_webcam_conf         webcam;
-	struct msi_ec_fn_win_swap_conf    fn_win_swap;
-	struct msi_ec_cooler_boost_conf   cooler_boost;
-	struct msi_ec_shift_mode_conf     shift_mode;
-	struct msi_ec_super_battery_conf  super_battery;
-	struct msi_ec_fan_mode_conf       fan_mode;
-	struct msi_ec_cpu_conf            cpu;
-	struct msi_ec_gpu_conf            gpu;
-	struct msi_ec_led_conf            leds;
-	struct msi_ec_kbd_bl_conf         kbd_bl;
+	struct msi_ec_charge_control_conf 	charge_control;
+	struct msi_ec_webcam_conf         	webcam;
+	struct msi_ec_fn_win_swap_conf    	fn_win_swap;
+	struct msi_ec_cooler_boost_conf   	cooler_boost;
+	struct msi_ec_usb_power_charge_conf	usb_power_charge;
+	struct msi_ec_shift_mode_conf     	shift_mode;
+	struct msi_ec_super_battery_conf  	super_battery;
+	struct msi_ec_fan_mode_conf       	fan_mode;
+	struct msi_ec_cpu_conf            	cpu;
+	struct msi_ec_gpu_conf            	gpu;
+	struct msi_ec_led_conf            	leds;
+	struct msi_ec_kbd_bl_conf         	kbd_bl;
+	struct msi_ec_fans					fans;
 };
 
 #endif // __MSI_EC_REGISTERS_CONFIG__
