@@ -33,6 +33,11 @@ struct msi_ec_cooler_boost_conf {
 	int bit;
 };
 
+struct msi_ec_usb_power_charge_conf {
+	int address;
+	int bit;
+};
+
 #define MSI_EC_MODE_NULL { NULL, 0 }
 struct msi_ec_mode {
 	const char *name;
@@ -55,14 +60,33 @@ struct msi_ec_fan_mode_conf {
 	struct msi_ec_mode modes[5]; // fixed size for easier hard coding
 };
 
+#define MSI_EC_FAN_TABLE_SIZE_MAX 16
+#define MSI_EC_FAN_TABLE_TEMP_MAX 100 // °C
+#define MSI_EC_FAN_TABLE_SPEED_MAX 150 // %
+#define MSI_EC_FAN_TABLE_SPEED_MIN_LAST 100 // % at the highest temperature
+
 struct msi_ec_cpu_conf {
 	int rt_temp_address;
 	int rt_fan_speed_address; // realtime % RPM
+
+	int table_size; // number of fan curve points
+	int table_temp_address;
+	int table_fan_speed_address;
 };
 
 struct msi_ec_gpu_conf {
 	int rt_temp_address;
 	int rt_fan_speed_address; // realtime % RPM
+
+	int table_size; // number of fan curve points
+	int table_temp_address;
+	int table_fan_speed_address;
+};
+
+struct msi_ec_fans_conf {
+	int fan0_address;
+	int fan1_address;
+	int fan2_address;
 };
 
 struct msi_ec_led_conf {
@@ -89,6 +113,7 @@ struct msi_ec_conf {
 	struct msi_ec_webcam_conf         webcam;
 	struct msi_ec_fn_win_swap_conf    fn_win_swap;
 	struct msi_ec_cooler_boost_conf   cooler_boost;
+	struct msi_ec_usb_power_charge_conf usb_power_charge;
 	struct msi_ec_shift_mode_conf     shift_mode;
 	struct msi_ec_super_battery_conf  super_battery;
 	struct msi_ec_fan_mode_conf       fan_mode;
@@ -96,6 +121,7 @@ struct msi_ec_conf {
 	struct msi_ec_gpu_conf            gpu;
 	struct msi_ec_led_conf            leds;
 	struct msi_ec_kbd_bl_conf         kbd_bl;
+	struct msi_ec_fans_conf           fans;
 };
 
 #endif // __MSI_EC_REGISTERS_CONFIG__

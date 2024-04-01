@@ -82,6 +82,10 @@ static struct msi_ec_conf CONF_G1_0 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -108,10 +112,18 @@ static struct msi_ec_conf CONF_G1_0 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -125,6 +137,11 @@ static struct msi_ec_conf CONF_G1_0 __initdata = {
 		.bl_state_address = 0xf3,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -168,6 +185,10 @@ static struct msi_ec_conf CONF_G1_1 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -193,10 +214,18 @@ static struct msi_ec_conf CONF_G1_1 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -210,6 +239,11 @@ static struct msi_ec_conf CONF_G1_1 __initdata = {
 		.bl_state_address = 0xf3,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -239,6 +273,10 @@ static struct msi_ec_conf CONF_G1_2 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -264,10 +302,18 @@ static struct msi_ec_conf CONF_G1_2 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -281,6 +327,11 @@ static struct msi_ec_conf CONF_G1_2 __initdata = {
 		.bl_state_address = MSI_EC_ADDR_UNSUPP, // RGB
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -324,6 +375,10 @@ static struct msi_ec_conf CONF_G1_3 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -350,10 +405,18 @@ static struct msi_ec_conf CONF_G1_3 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -367,6 +430,11 @@ static struct msi_ec_conf CONF_G1_3 __initdata = {
 		.bl_state_address = MSI_EC_ADDR_UNSUPP, // RGB
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -395,6 +463,10 @@ static struct msi_ec_conf CONF_G1_4 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -421,10 +493,18 @@ static struct msi_ec_conf CONF_G1_4 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -438,6 +518,11 @@ static struct msi_ec_conf CONF_G1_4 __initdata = {
 		.bl_state_address = 0xf3,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -470,6 +555,10 @@ static struct msi_ec_conf CONF_G1_5 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -495,10 +584,18 @@ static struct msi_ec_conf CONF_G1_5 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = MSI_EC_ADDR_UNSUPP,
 		.rt_fan_speed_address = MSI_EC_ADDR_UNSUPP,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -512,6 +609,11 @@ static struct msi_ec_conf CONF_G1_5 __initdata = {
 		.bl_state_address = 0xf3,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -549,6 +651,10 @@ static struct msi_ec_conf CONF_G1_6 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -574,10 +680,18 @@ static struct msi_ec_conf CONF_G1_6 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = MSI_EC_ADDR_UNSUPP,
 		.rt_fan_speed_address = MSI_EC_ADDR_UNSUPP,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -591,6 +705,11 @@ static struct msi_ec_conf CONF_G1_6 __initdata = {
 		.bl_state_address = 0xf3,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -630,6 +749,10 @@ static struct msi_ec_conf CONF_G1_7 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -657,10 +780,18 @@ static struct msi_ec_conf CONF_G1_7 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -674,6 +805,11 @@ static struct msi_ec_conf CONF_G1_7 __initdata = {
 		.bl_state_address = 0xf3,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -701,6 +837,10 @@ static struct msi_ec_conf CONF_G1_8 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -725,10 +865,18 @@ static struct msi_ec_conf CONF_G1_8 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -741,6 +889,11 @@ static struct msi_ec_conf CONF_G1_8 __initdata = {
 		.bl_state_address = 0xf3,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -774,6 +927,10 @@ static struct msi_ec_conf CONF_G1_9 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -799,10 +956,18 @@ static struct msi_ec_conf CONF_G1_9 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -816,6 +981,11 @@ static struct msi_ec_conf CONF_G1_9 __initdata = {
 		.bl_state_address = MSI_EC_ADDR_UNSUPP,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -843,6 +1013,10 @@ static struct msi_ec_conf CONF_G1_10 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -867,10 +1041,18 @@ static struct msi_ec_conf CONF_G1_10 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -884,6 +1066,11 @@ static struct msi_ec_conf CONF_G1_10 __initdata = {
 		.bl_state_address = MSI_EC_ADDR_UNSUPP, // RGB
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -917,6 +1104,10 @@ static struct msi_ec_conf CONF_G1_11 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -942,10 +1133,18 @@ static struct msi_ec_conf CONF_G1_11 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -959,6 +1158,11 @@ static struct msi_ec_conf CONF_G1_11 __initdata = {
 		.bl_state_address = 0xf3,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -986,6 +1190,10 @@ static struct msi_ec_conf CONF_G1_13 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -1011,10 +1219,18 @@ static struct msi_ec_conf CONF_G1_13 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -1028,6 +1244,11 @@ static struct msi_ec_conf CONF_G1_13 __initdata = {
 		.bl_state_address = 0xF3,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -1072,6 +1293,10 @@ static struct msi_ec_conf CONF_G2_0 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xd2,
 		.modes = {
@@ -1097,10 +1322,18 @@ static struct msi_ec_conf CONF_G2_0 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = MSI_EC_ADDR_UNSUPP,
 		.rt_fan_speed_address = MSI_EC_ADDR_UNSUPP,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = 0x2c,
@@ -1114,6 +1347,11 @@ static struct msi_ec_conf CONF_G2_0 __initdata = {
 		.bl_state_address = 0xd3,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -1196,6 +1434,10 @@ static struct msi_ec_conf CONF_G2_1 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xd2,
 		.modes = {
@@ -1221,10 +1463,18 @@ static struct msi_ec_conf CONF_G2_1 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = 0x2c,
@@ -1238,6 +1488,11 @@ static struct msi_ec_conf CONF_G2_1 __initdata = {
 		.bl_state_address = 0xd3, // mix of single and RGB
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -1253,8 +1508,6 @@ static const char *ALLOWED_FW_G2_2[] __initconst = {
 	"16V4EMS1.115",
 	"16V4EMS1.116",
 	"16V4EMS2.106", // Creator 15 A11UE
-	"16V5EMS1.107", // Stealth GS66 12UE / 12UGS
-	"16V5EMS1.108",
 	"17K3EMS1.112", // GE76 Raider 11U / 11UH
 	"17K3EMS1.113", // GE76 Raider 11UE
 	"17K3EMS1.114",
@@ -1288,6 +1541,10 @@ static struct msi_ec_conf CONF_G2_2 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xd2,
 		.modes = {
@@ -1313,10 +1570,18 @@ static struct msi_ec_conf CONF_G2_2 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -1330,6 +1595,11 @@ static struct msi_ec_conf CONF_G2_2 __initdata = {
 		.bl_state_address = MSI_EC_ADDR_UNSUPP,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -1387,6 +1657,10 @@ static struct msi_ec_conf CONF_G2_3 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xd2,
 		.modes = {
@@ -1412,10 +1686,18 @@ static struct msi_ec_conf CONF_G2_3 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = MSI_EC_ADDR_UNSUPP,
 		.rt_fan_speed_address = MSI_EC_ADDR_UNSUPP,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = 0x2c, // not present on `14F1`
@@ -1429,6 +1711,11 @@ static struct msi_ec_conf CONF_G2_3 __initdata = {
 		.bl_state_address = 0xd3,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -1457,6 +1744,10 @@ static struct msi_ec_conf CONF_G2_4 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xd2,
 		.modes = {
@@ -1482,10 +1773,18 @@ static struct msi_ec_conf CONF_G2_4 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = 0x2c,
@@ -1499,6 +1798,11 @@ static struct msi_ec_conf CONF_G2_4 __initdata = {
 		.bl_state_address = 0xd3,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -1533,6 +1837,10 @@ static struct msi_ec_conf CONF_G2_5 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xd2,
 		.modes = {
@@ -1558,10 +1866,18 @@ static struct msi_ec_conf CONF_G2_5 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = 0x2c,
@@ -1575,6 +1891,11 @@ static struct msi_ec_conf CONF_G2_5 __initdata = {
 		.bl_state_address = MSI_EC_ADDR_UNSUPP,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -1617,6 +1938,10 @@ static struct msi_ec_conf CONF_G2_6 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xd2,
 		.modes = {
@@ -1642,10 +1967,18 @@ static struct msi_ec_conf CONF_G2_6 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -1659,6 +1992,11 @@ static struct msi_ec_conf CONF_G2_6 __initdata = {
 		.bl_state_address = 0xd3,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
 	},
 };
 
@@ -1776,6 +2114,10 @@ static struct msi_ec_conf CONF_G2_10 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_power_charge = {
+		.address = MSI_EC_ADDR_UNSUPP,
+		.bit     = 0,
+	},
 	.shift_mode = {
 		.address = 0xd2,
 		.modes = {
@@ -1801,10 +2143,18 @@ static struct msi_ec_conf CONF_G2_10 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 0,
+		.table_temp_address      = MSI_EC_ADDR_UNSUPP,
+		.table_fan_speed_address = MSI_EC_ADDR_UNSUPP,
 	},
 	.leds = {
 		.micmute_led_address = 0x2c,
@@ -1818,6 +2168,97 @@ static struct msi_ec_conf CONF_G2_10 __initdata = {
 		.bl_state_address = MSI_EC_ADDR_UNSUPP,
 		.state_base_value = 0x80,
 		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = MSI_EC_ADDR_UNSUPP,
+		.fan1_address = MSI_EC_ADDR_UNSUPP,
+		.fan2_address = MSI_EC_ADDR_UNSUPP,
+	},
+};
+
+static const char *ALLOWED_FW_G2_11[] __initconst = {
+	"16V5EMS1.104", // Stealth GS66 12UE / 12UGS / 12UHS
+	"16V5EMS1.107",
+	"16V5EMS1.108",
+	NULL
+};
+
+static struct msi_ec_conf CONF_G2_11 __initdata = {
+	.allowed_fw = ALLOWED_FW_G2_11, // based on CONF_G2_2
+	.charge_control_address = 0xd7,
+	.webcam = {
+		.address       = 0x2e,
+		.block_address = 0x2f,
+		.bit           = 1,
+	},
+	.fn_win_swap = {
+		.address = 0xe8,
+		.bit     = 4,
+		.invert  = true,
+	},
+	.cooler_boost = {
+		.address = 0x98,
+		.bit     = 7,
+	},
+	.usb_power_charge = {
+		.address = 0xbf,
+		.bit     = 5,
+	},
+	.shift_mode = {
+		.address = 0xd2,
+		.modes = {
+			{ SM_TURBO_NAME,   0xc4 },
+			{ SM_ECO_NAME,     0xc2 },
+			{ SM_COMFORT_NAME, 0xc1 },
+			MSI_EC_MODE_NULL
+		},
+	},
+	.super_battery = {
+		.address = 0xeb,
+		.mask    = 0x0f,
+	},
+	.fan_mode = {
+		.address = 0xd4,
+		.modes = {
+			{ FM_AUTO_NAME,     0x0d },
+			{ FM_SILENT_NAME,   0x1d },
+			{ FM_ADVANCED_NAME, 0x8d },
+			MSI_EC_MODE_NULL
+		},
+	},
+	.cpu = {
+		.rt_temp_address      = 0x68,
+		.rt_fan_speed_address = 0x71,
+
+		.table_size              = 7,
+		.table_temp_address      = 0x6a,
+		.table_fan_speed_address = 0x72,
+	},
+	.gpu = {
+		.rt_temp_address      = 0x80,
+		.rt_fan_speed_address = 0x89,
+
+		.table_size              = 7,
+		.table_temp_address      = 0x82,
+		.table_fan_speed_address = 0x8a,
+	},
+	.leds = {
+		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
+		.mute_led_address    = MSI_EC_ADDR_UNSUPP,
+		.bit                 = 1,
+	},
+	.kbd_bl = {
+		.bl_mode_address  = MSI_EC_ADDR_UNSUPP,
+		.bl_modes         = { },
+		.max_mode         = 1,
+		.bl_state_address = MSI_EC_ADDR_UNSUPP,
+		.state_base_value = 0x80,
+		.max_state        = 3,
+	},
+	.fans = {
+		.fan0_address = 0xc9,
+		.fan1_address = 0xcb,
+		.fan2_address = 0xcd,
 	},
 };
 
@@ -1848,6 +2289,7 @@ static struct msi_ec_conf *CONFIGURATIONS[] __initdata = {
 	&CONF_G2_5,
 	&CONF_G2_6,
 	&CONF_G2_10,
+	&CONF_G2_11,
 	NULL
 };
 
@@ -2313,6 +2755,37 @@ static ssize_t cooler_boost_store(struct device *dev,
 	return count;
 }
 
+static ssize_t usb_power_charge_show(struct device *device,
+				     struct device_attribute *attr, char *buf)
+{
+	int result;
+	bool value;
+
+	result = ec_check_bit(conf.usb_power_charge.address, conf.usb_power_charge.bit, &value);
+	if (result < 0)
+		return result;
+
+	return sysfs_emit(buf, "%s\n", str_on_off(value));
+}
+
+static ssize_t usb_power_charge_store(struct device *dev,
+				      struct device_attribute *attr,
+				      const char *buf, size_t count)
+{
+	int result;
+	bool value;
+
+	result = kstrtobool(buf, &value);
+	if (result)
+		return result;
+
+	result = ec_set_bit(conf.usb_power_charge.address, conf.usb_power_charge.bit, value);
+	if (result < 0)
+		return result;
+
+	return count;
+}
+
 static ssize_t available_shift_modes_show(struct device *device,
 					  struct device_attribute *attr,
 					  char *buf)
@@ -2532,6 +3005,7 @@ static DEVICE_ATTR_RW(webcam_block);
 static DEVICE_ATTR_RW(fn_key);
 static DEVICE_ATTR_RW(win_key);
 static DEVICE_ATTR_RW(cooler_boost);
+static DEVICE_ATTR_RW(usb_power_charge);
 static DEVICE_ATTR_RO(available_shift_modes);
 static DEVICE_ATTR_RW(shift_mode);
 static DEVICE_ATTR_RW(super_battery);
@@ -2546,6 +3020,7 @@ static struct attribute *msi_root_attrs[] = {
 	&dev_attr_fn_key.attr,
 	&dev_attr_win_key.attr,
 	&dev_attr_cooler_boost.attr,
+	&dev_attr_usb_power_charge.attr,
 	&dev_attr_available_shift_modes.attr,
 	&dev_attr_shift_mode.attr,
 	&dev_attr_super_battery.attr,
@@ -2555,6 +3030,78 @@ static struct attribute *msi_root_attrs[] = {
 	&dev_attr_fw_release_date.attr,
 	NULL
 };
+
+// ============================================================ //
+// Sysfs platform device attributes (fan curve tables)
+// ============================================================ //
+
+// Prints the fan curve table as a comma separated list
+static ssize_t read_table(int address, int size, char *buf)
+{
+	u8 rdata;
+	int result;
+	int count = 0;
+
+	for (int i = 0; i < size; i++) {
+		result = ec_read(address + i, &rdata);
+		if (result < 0)
+			return result;
+
+		count += sysfs_emit_at(buf, count, i ? ",%i" : "%i", rdata);
+	}
+
+	count += sysfs_emit_at(buf, count, "\n");
+
+	return count;
+}
+
+/*
+ * Writes the whole fan curve table, argument format: comma separated list
+ * with exactly `size` values. The table is only written if every value is
+ * in [0, max], the values are non-decreasing and the last value is at
+ * least `min_last`, so a fan curve can never stop cooling at high
+ * temperatures.
+ */
+static int write_table(int address, int size, int max, int min_last,
+		       const char *buf)
+{
+	u8 values[MSI_EC_FAN_TABLE_SIZE_MAX];
+	const char *pos = buf;
+	int value;
+	int len;
+	int result;
+
+	if (size <= 0 || size > MSI_EC_FAN_TABLE_SIZE_MAX)
+		return -EINVAL;
+
+	for (int i = 0; i < size; i++) {
+		if (sscanf(pos, i ? ",%d%n" : "%d%n", &value, &len) != 1)
+			return -EINVAL;
+		pos += len;
+
+		if (value < 0 || value > max)
+			return -EINVAL;
+
+		if (i > 0 && value < values[i - 1])
+			return -EINVAL;
+
+		values[i] = value;
+	}
+
+	if (*skip_spaces(pos) != '\0')
+		return -EINVAL;
+
+	if (values[size - 1] < min_last)
+		return -EINVAL;
+
+	for (int i = 0; i < size; i++) {
+		result = ec_write(address + i, values[i]);
+		if (result < 0)
+			return result;
+	}
+
+	return 0;
+}
 
 // ============================================================ //
 // Sysfs platform device attributes (cpu)
@@ -2588,6 +3135,49 @@ static ssize_t cpu_realtime_fan_speed_show(struct device *device,
 	return sysfs_emit(buf, "%i\n", rdata);
 }
 
+static ssize_t cpu_table_temperature_show(struct device *device,
+					  struct device_attribute *attr,
+					  char *buf)
+{
+	return read_table(conf.cpu.table_temp_address, conf.cpu.table_size, buf);
+}
+
+static ssize_t cpu_table_temperature_store(struct device *dev,
+					   struct device_attribute *attr,
+					   const char *buf, size_t count)
+{
+	int result;
+
+	result = write_table(conf.cpu.table_temp_address, conf.cpu.table_size,
+			     MSI_EC_FAN_TABLE_TEMP_MAX, 0, buf);
+	if (result < 0)
+		return result;
+
+	return count;
+}
+
+static ssize_t cpu_table_fan_speed_show(struct device *device,
+					struct device_attribute *attr,
+					char *buf)
+{
+	return read_table(conf.cpu.table_fan_speed_address, conf.cpu.table_size, buf);
+}
+
+static ssize_t cpu_table_fan_speed_store(struct device *dev,
+					 struct device_attribute *attr,
+					 const char *buf, size_t count)
+{
+	int result;
+
+	result = write_table(conf.cpu.table_fan_speed_address, conf.cpu.table_size,
+			     MSI_EC_FAN_TABLE_SPEED_MAX,
+			     MSI_EC_FAN_TABLE_SPEED_MIN_LAST, buf);
+	if (result < 0)
+		return result;
+
+	return count;
+}
+
 static struct device_attribute dev_attr_cpu_realtime_temperature = {
 	.attr = {
 		.name = "realtime_temperature",
@@ -2604,9 +3194,29 @@ static struct device_attribute dev_attr_cpu_realtime_fan_speed = {
 	.show = cpu_realtime_fan_speed_show,
 };
 
+static struct device_attribute dev_attr_cpu_table_temperature = {
+	.attr = {
+		.name = "table_temp",
+		.mode = 0644,
+	},
+	.show = cpu_table_temperature_show,
+	.store = cpu_table_temperature_store,
+};
+
+static struct device_attribute dev_attr_cpu_table_fan_speed = {
+	.attr = {
+		.name = "table_fan_speed",
+		.mode = 0644,
+	},
+	.show = cpu_table_fan_speed_show,
+	.store = cpu_table_fan_speed_store,
+};
+
 static struct attribute *msi_cpu_attrs[] = {
 	&dev_attr_cpu_realtime_temperature.attr,
 	&dev_attr_cpu_realtime_fan_speed.attr,
+	&dev_attr_cpu_table_temperature.attr,
+	&dev_attr_cpu_table_fan_speed.attr,
 	NULL
 };
 
@@ -2625,6 +3235,9 @@ static ssize_t gpu_realtime_temperature_show(struct device *device,
 	if (result < 0)
 		return result;
 
+	if (rdata == 0)
+		return sysfs_emit(buf, "N/A\n");
+
 	return sysfs_emit(buf, "%i\n", rdata);
 }
 
@@ -2640,6 +3253,49 @@ static ssize_t gpu_realtime_fan_speed_show(struct device *device,
 		return result;
 
 	return sysfs_emit(buf, "%i\n", rdata);
+}
+
+static ssize_t gpu_table_temperature_show(struct device *device,
+					  struct device_attribute *attr,
+					  char *buf)
+{
+	return read_table(conf.gpu.table_temp_address, conf.gpu.table_size, buf);
+}
+
+static ssize_t gpu_table_temperature_store(struct device *dev,
+					   struct device_attribute *attr,
+					   const char *buf, size_t count)
+{
+	int result;
+
+	result = write_table(conf.gpu.table_temp_address, conf.gpu.table_size,
+			     MSI_EC_FAN_TABLE_TEMP_MAX, 0, buf);
+	if (result < 0)
+		return result;
+
+	return count;
+}
+
+static ssize_t gpu_table_fan_speed_show(struct device *device,
+					struct device_attribute *attr,
+					char *buf)
+{
+	return read_table(conf.gpu.table_fan_speed_address, conf.gpu.table_size, buf);
+}
+
+static ssize_t gpu_table_fan_speed_store(struct device *dev,
+					 struct device_attribute *attr,
+					 const char *buf, size_t count)
+{
+	int result;
+
+	result = write_table(conf.gpu.table_fan_speed_address, conf.gpu.table_size,
+			     MSI_EC_FAN_TABLE_SPEED_MAX,
+			     MSI_EC_FAN_TABLE_SPEED_MIN_LAST, buf);
+	if (result < 0)
+		return result;
+
+	return count;
 }
 
 static struct device_attribute dev_attr_gpu_realtime_temperature = {
@@ -2658,9 +3314,100 @@ static struct device_attribute dev_attr_gpu_realtime_fan_speed = {
 	.show = gpu_realtime_fan_speed_show,
 };
 
+static struct device_attribute dev_attr_gpu_table_temperature = {
+	.attr = {
+		.name = "table_temp",
+		.mode = 0644,
+	},
+	.show = gpu_table_temperature_show,
+	.store = gpu_table_temperature_store,
+};
+
+static struct device_attribute dev_attr_gpu_table_fan_speed = {
+	.attr = {
+		.name = "table_fan_speed",
+		.mode = 0644,
+	},
+	.show = gpu_table_fan_speed_show,
+	.store = gpu_table_fan_speed_store,
+};
+
 static struct attribute *msi_gpu_attrs[] = {
 	&dev_attr_gpu_realtime_temperature.attr,
 	&dev_attr_gpu_realtime_fan_speed.attr,
+	&dev_attr_gpu_table_temperature.attr,
+	&dev_attr_gpu_table_fan_speed.attr,
+	NULL
+};
+
+// ============================================================ //
+// Sysfs platform device attributes (fans)
+// ============================================================ //
+
+static ssize_t read_fan(int address, char *buf)
+{
+	u8 rdata;
+	int result;
+
+	result = ec_read(address, &rdata);
+	if (result < 0)
+		return result;
+
+	if (rdata == 0)
+		return sysfs_emit(buf, "0\n");
+
+	return sysfs_emit(buf, "%i\n", 470000 / rdata);
+}
+
+static ssize_t fans_fan0_show(struct device *device,
+			      struct device_attribute *attr,
+			      char *buf)
+{
+	return read_fan(conf.fans.fan0_address, buf);
+}
+
+static ssize_t fans_fan1_show(struct device *device,
+			      struct device_attribute *attr,
+			      char *buf)
+{
+	return read_fan(conf.fans.fan1_address, buf);
+}
+
+static ssize_t fans_fan2_show(struct device *device,
+			      struct device_attribute *attr,
+			      char *buf)
+{
+	return read_fan(conf.fans.fan2_address, buf);
+}
+
+static struct device_attribute dev_attr_fans_fan0 = {
+	.attr = {
+		.name = "fan0",
+		.mode = 0444,
+	},
+	.show = fans_fan0_show,
+};
+
+static struct device_attribute dev_attr_fans_fan1 = {
+	.attr = {
+		.name = "fan1",
+		.mode = 0444,
+	},
+	.show = fans_fan1_show,
+};
+
+static struct device_attribute dev_attr_fans_fan2 = {
+	.attr = {
+		.name = "fan2",
+		.mode = 0444,
+	},
+	.show = fans_fan2_show,
+};
+
+static struct attribute *msi_fans_attrs[] = {
+	&dev_attr_fans_fan0.attr,
+	&dev_attr_fans_fan1.attr,
+	&dev_attr_fans_fan2.attr,
 	NULL
 };
 
@@ -2893,6 +3640,9 @@ static umode_t msi_ec_is_visible(struct kobject *kobj,
 	else if (attr == &dev_attr_cooler_boost.attr)
 		address = conf.cooler_boost.address;
 
+	else if (attr == &dev_attr_usb_power_charge.attr)
+		address = conf.usb_power_charge.address;
+
 	else if (attr == &dev_attr_available_shift_modes.attr ||
 		 attr == &dev_attr_shift_mode.attr)
 		address = conf.shift_mode.address;
@@ -2911,12 +3661,34 @@ static umode_t msi_ec_is_visible(struct kobject *kobj,
 	else if (attr == &dev_attr_cpu_realtime_fan_speed.attr)
 		address = conf.cpu.rt_fan_speed_address;
 
+	else if (attr == &dev_attr_cpu_table_temperature.attr)
+		address = conf.cpu.table_temp_address;
+
+	else if (attr == &dev_attr_cpu_table_fan_speed.attr)
+		address = conf.cpu.table_fan_speed_address;
+
 	/* gpu group */
 	else if (attr == &dev_attr_gpu_realtime_temperature.attr)
 		address = conf.gpu.rt_temp_address;
 
 	else if (attr == &dev_attr_gpu_realtime_fan_speed.attr)
 		address = conf.gpu.rt_fan_speed_address;
+
+	else if (attr == &dev_attr_gpu_table_temperature.attr)
+		address = conf.gpu.table_temp_address;
+
+	else if (attr == &dev_attr_gpu_table_fan_speed.attr)
+		address = conf.gpu.table_fan_speed_address;
+
+	/* fans group */
+	else if (attr == &dev_attr_fans_fan0.attr)
+		address = conf.fans.fan0_address;
+
+	else if (attr == &dev_attr_fans_fan1.attr)
+		address = conf.fans.fan1_address;
+
+	else if (attr == &dev_attr_fans_fan2.attr)
+		address = conf.fans.fan2_address;
 
 	/* default */
 	else
@@ -2941,6 +3713,12 @@ static struct attribute_group msi_gpu_group = {
 	.attrs = msi_gpu_attrs,
 };
 
+static struct attribute_group msi_fans_group = {
+	.name = "fans",
+	.is_visible = msi_ec_is_visible,
+	.attrs = msi_fans_attrs,
+};
+
 static const struct attribute_group msi_debug_group = {
 	.name = "debug",
 	.attrs = msi_debug_attrs,
@@ -2951,6 +3729,7 @@ static const struct attribute_group *msi_platform_groups[] = {
 	&msi_root_group,
 	&msi_cpu_group,
 	&msi_gpu_group,
+	&msi_fans_group,
 	NULL
 };
 

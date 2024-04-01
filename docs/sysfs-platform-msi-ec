@@ -26,6 +26,12 @@ Description:
 		to the maximum speed for quicker cooling.
 		Valid values: "on", "off".
 
+What:		/sys/devices/platform/<platform>/usb_power_charge
+Description:
+		Control the USB power charge feature. When enabled, the USB
+		ports keep supplying power while the laptop is turned off.
+		Valid values: "on", "off".
+
 What:		/sys/devices/platform/<platform>/available_shift_modes
 Description:
 		Read-only, shows the list of available shift modes for
@@ -70,6 +76,33 @@ Description:
 What:		/sys/devices/platform/<platform>/fw_release_date
 Description:
 		Read-only, returns the release date of the EC firmware.
+
+What:		/sys/devices/platform/<platform>/cpu/table_temp
+What:		/sys/devices/platform/<platform>/gpu/table_temp
+Description:
+		Allows to read and set the temperature points (in °C) of the
+		CPU/GPU fan curve used by the "advanced" fan mode.
+		The table is read and written as a comma separated list,
+		e.g. "60,70,80,85,90,95,100". A write must contain all points
+		of the table. Values must be in the range 0-100 and must not
+		decrease, otherwise the write is rejected with -EINVAL.
+
+What:		/sys/devices/platform/<platform>/cpu/table_fan_speed
+What:		/sys/devices/platform/<platform>/gpu/table_fan_speed
+Description:
+		Allows to read and set the fan speed points (in percent) of
+		the CPU/GPU fan curve used by the "advanced" fan mode.
+		The table is read and written as a comma separated list,
+		e.g. "0,25,50,75,100,125,150". A write must contain all points
+		of the table. Values must be in the range 0-150 and must not
+		decrease, and the last point must be at least 100, otherwise
+		the write is rejected with -EINVAL.
+
+What:		/sys/devices/platform/<platform>/fans/fan0
+What:		/sys/devices/platform/<platform>/fans/fan1
+What:		/sys/devices/platform/<platform>/fans/fan2
+Description:
+		Read-only, returns the current speed of the fan in RPM.
 
 What:		/sys/devices/platform/<platform>/debug/ec_dump
 Description:
