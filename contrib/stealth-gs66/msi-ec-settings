@@ -1,0 +1,79 @@
+#!/bin/bash
+#
+# Applies fan curves, fan mode, shift mode and charge threshold via msi-ec.
+#
+# Install:
+#   sudo install -m 755 msi-ec-settings /usr/local/bin/msi-ec-settings
+#   sudo install -m 644 msi-ec-settings.service /etc/systemd/system/msi-ec-settings.service
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now msi-ec-settings.service
+
+set -euo pipefail
+
+# ------------------------------------------------------------ #
+# Configuration (leave a value empty to keep the current setting)
+# ------------------------------------------------------------ #
+
+FAN_MODE="advanced"
+SHIFT_MODE="comfort"
+CHARGE_END_THRESHOLD="80" # %, charging starts again 10% below
+
+# Fan curves as "temperature:speed" points (°C:%), exactly 7 points each.
+# Temperatures and speeds must not decrease, temperatures 0-100,
+# speeds 0-150, the last speed must be at least 100.
+CPU_FAN_CURVE=("60:0" "70:25" "80:50" "85:75" "90:100" "95:125" "100:150")
+GPU_FAN_CURVE=("60:0" "70:25" "80:50" "85:75" "90:100" "95:125" "100:150")
+
+# ------------------------------------------------------------ #
+
+SYS_DIR="/sys/devices/platform/msi-ec"
+BAT_DIR="/sys/class/power_supply/BAT1"
+
+# wait for the module to be loaded
+for _ in $(seq 1 30); do
+    [ -f "$SYS_DIR/fw_version" ] && break
+    sleep 1
+done
+if [ ! -f "$SYS_DIR/fw_version" ]; then
+    echo "msi-ec is not loaded" >&2
+    exit 1
+fi
+
+echo "EC firmware: $(cat "$SYS_DIR/fw_version")"
+
+write() {
+    local file="$1" value="$2"
+
+    if [ ! -w "$file" ]; then
+        echo "Not supported: $file" >&2
+        return 1
+    fi
+
+    echo "$value" > "$file"
+    echo "$file = $(cat "$file")"
+}
+
+set_curve() {
+    local dir="$1"; shift
+    local temps=() speeds=() temp speed
+
+    [ "$#" -eq 0 ] && return 0
+
+    for point in "$@"; do
+        IFS=':' read -r temp speed <<< "$point"
+        temps+=("$temp")
+        speeds+=("$speed")
+    done
+
+    write "$dir/table_temp" "$(IFS=,; echo "${temps[*]}")"
+    write "$dir/table_fan_speed" "$(IFS=,; echo "${speeds[*]}")"
+}
+
+set_curve "$SYS_DIR/cpu" "${CPU_FAN_CURVE[@]}"
+set_curve "$SYS_DIR/gpu" "${GPU_FAN_CURVE[@]}"
+
+[ -n "$FAN_MODE" ] && write "$SYS_DIR/fan_mode" "$FAN_MODE"
+[ -n "$SHIFT_MODE" ] && write "$SYS_DIR/shift_mode" "$SHIFT_MODE"
+[ -n "$CHARGE_END_THRESHOLD" ] && write "$BAT_DIR/charge_control_end_threshold" "$CHARGE_END_THRESHOLD"
+
+exit 0

@@ -1,0 +1,12 @@
+[Unit]
+Description=Apply MSI EC settings (fan curves, fan mode, shift mode, charge threshold)
+After=systemd-modules-load.service
+Wants=systemd-modules-load.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/msi-ec-settings
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
